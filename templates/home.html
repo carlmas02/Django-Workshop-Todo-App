@@ -1,0 +1,45 @@
+<style>
+
+    .note{
+        border: 1px solid black;
+        display: inline-block;
+        padding: 1rem;
+        margin: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        display: inline-block;
+    }
+    
+    
+    </style>
+    
+    
+    
+    <h1>Todo App</h1>
+    
+    <h1>Welcome {{user}}</h1>
+    
+    <div>
+    <a href="/logout" >Logout</a>
+    
+    <a href="/add" >Add a task</a>
+    
+    </div>
+    
+    
+    {% for note in notes %}
+    
+        <div class="note">
+    
+            <h1>{{note.title}}</h1>
+            
+            <p>{{note.task}}</p>
+    
+            <a href="/delete/{{note.id}}" >Delete the note</a>
+        </div>  
+    
+    
+    
+    {% endfor %}
